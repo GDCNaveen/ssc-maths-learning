@@ -29,7 +29,7 @@ const VideoPlayer = ({
   // Vimeo video URLs mapping
   const vimeoUrls: { [key: string]: string } = {
     '1095495803': 'https://player.vimeo.com/video/1095495803?h=55eac0fa5a&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1',
-    '1095510347': 'https://player.vimeo.com/video/1095510347?h=adbdfa174b&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1'
+    
   };
 
   // Simulate video progress (in real implementation, you'd get this from Vimeo API)
