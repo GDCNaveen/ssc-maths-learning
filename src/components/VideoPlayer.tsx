@@ -75,18 +75,7 @@ const VideoPlayer = ({
     }
   };
 
-  const handleTimelineChange = (value: number[]) => {
-    const newTime = value[0];
-    setCurrentTime(newTime);
-    // In a real implementation, you would seek the video to this time
-    console.log(`Seeking to ${newTime} seconds`);
-  };
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
+ 
 
   return (
     <div className="relative w-full bg-black rounded-t-lg overflow-hidden">
@@ -117,18 +106,7 @@ const VideoPlayer = ({
               </button>
             </div>
             {/* Timeline Controls */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-              <div className="flex items-center gap-3 text-white text-xs">
-                <span>{formatTime(currentTime)}</span>
-                <div className="flex-1">
-                  <Slider
-                    value={[currentTime]}
-                    onValueChange={handleTimelineChange}
-                    max={videoDuration}
-                    step={1}
-                    className="w-full"
-                  />
-                </div>
+            
                 <span>{formatTime(videoDuration)}</span>
               </div>
             </div>
